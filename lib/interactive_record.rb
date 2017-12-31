@@ -46,6 +46,7 @@ class InteractiveRecord
       INSERT INTO #{table_name_for_insert} (#{col_names_for_insert})
       VALUES (#{values_for_insert})
     SQL
+    DB[:conn].execute(sql)
   end
 
 end

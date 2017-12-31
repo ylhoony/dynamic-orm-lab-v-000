@@ -70,10 +70,10 @@ class InteractiveRecord
 
     sql = <<-SQL
       SELECT * FROM #{table_name}
-      WHERE ?
+      WHERE #{params}
     SQL
 
-    DB[:conn].execute(sql, params)
+    DB[:conn].execute(sql)
 binding.pry
   end
 

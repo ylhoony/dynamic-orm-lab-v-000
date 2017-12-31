@@ -14,7 +14,7 @@ class InteractiveRecord
     table_info = DB[:conn].execute(sql)
     column_names = []
     table_info.each do |row|
-      column_names << row.name
+      column_names << row["name"]
     end
     column_names
   end

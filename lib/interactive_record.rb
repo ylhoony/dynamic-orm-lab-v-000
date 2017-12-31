@@ -67,14 +67,14 @@ class InteractiveRecord
       # binding.pry
     end
     params = wheres.join(", ")
-binding.pry
+
     sql = <<-SQL
       SELECT * FROM #{table_name}
       WHERE ?
     SQL
 
     DB[:conn].execute(sql, params)
-
+binding.pry
   end
 
 end

@@ -65,7 +65,7 @@ class InteractiveRecord
     end
     params = wheres.join(", ")
 
-    sql <<-SQL
+    sql = <<-SQL
       SELECT * FROM #{table_name}
       WHERE ?
     SQL

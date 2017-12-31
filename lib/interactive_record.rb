@@ -64,6 +64,7 @@ class InteractiveRecord
     wheres = []
     attributes.each do |key, value|
       wheres << '"#{key}"= "#{value}"'
+      binding.pry
     end
     params = wheres.join(", ")
 binding.pry

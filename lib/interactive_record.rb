@@ -59,7 +59,16 @@ class InteractiveRecord
   end
 
   def self.find_by(attributes)
-
+    wheres = []
+    attributes.each do |key, value|
+      wheres << '"#{key}"= "#{value}"'
+    end
+    
+    sql <<-SQL
+      SELECT * FROM #{table_name}
+      WHERE 
+    SQL
+    
   end
 
 end

@@ -64,7 +64,7 @@ class InteractiveRecord
       wheres << '"#{key}"= "#{value}"'
     end
     params = wheres.join(", ")
-
+binding.pry
     sql = <<-SQL
       SELECT * FROM #{table_name}
       WHERE ?

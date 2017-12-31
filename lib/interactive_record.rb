@@ -63,7 +63,7 @@ class InteractiveRecord
   def self.find_by(attributes)
     wheres = []
     attributes.each do |key, value|
-      wheres << "#{key.to_s}= #{value}"
+      wheres << "#{key.to_s} = '#{value}'"
       # binding.pry
     end
     params = wheres.join(", ")

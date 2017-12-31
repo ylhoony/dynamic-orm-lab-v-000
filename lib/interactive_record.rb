@@ -64,10 +64,10 @@ class InteractiveRecord
     wheres = []
     attributes.each do |key, value|
       wheres << '"#{key.to_s}"= "#{value}"'
-      # binding.pry
+      binding.pry
     end
     params = wheres.join(", ")
-binding.pry
+# binding.pry
     sql = <<-SQL
       SELECT * FROM #{table_name}
       WHERE ?

@@ -67,7 +67,7 @@ class InteractiveRecord
 
     sql <<-SQL
       SELECT * FROM #{table_name}
-      WHERE #{wheres.join(", ")}
+      WHERE #{params}
     SQL
 
     DB[:conn].execute(sql)

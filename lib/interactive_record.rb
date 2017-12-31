@@ -63,12 +63,12 @@ class InteractiveRecord
     attributes.each do |key, value|
       wheres << '"#{key}"= "#{value}"'
     end
-    
+
     sql <<-SQL
       SELECT * FROM #{table_name}
-      WHERE 
+      WHERE #{wheres.join(", ")}
     SQL
-    
+
   end
 
 end

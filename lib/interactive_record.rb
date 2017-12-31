@@ -64,7 +64,6 @@ class InteractiveRecord
     wheres = []
     attributes.each do |key, value|
       wheres << "#{key.to_s} = '#{value}'"
-      # binding.pry
     end
     params = wheres.join(", ")
 
@@ -74,7 +73,6 @@ class InteractiveRecord
     SQL
 
     DB[:conn].execute(sql)
-# binding.pry
   end
 
 end

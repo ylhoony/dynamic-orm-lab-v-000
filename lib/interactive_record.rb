@@ -69,6 +69,8 @@ class InteractiveRecord
       WHERE #{wheres.join(", ")}
     SQL
 
+    DB[:conn].execute(sql)
+
   end
 
 end

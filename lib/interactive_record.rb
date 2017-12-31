@@ -8,7 +8,7 @@ class InteractiveRecord
   end
 
   def column_names
-
+    DB[:conn].execute("pragma table_info #{table_name} ")
   end
   
 end
